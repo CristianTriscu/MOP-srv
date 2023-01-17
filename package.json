@@ -1,0 +1,24 @@
+{
+  "name": "MOP-srv",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.17",
+    "@sap/hana-client": "^2.12.25",
+    "@sap/instance-manager": "^3.3.3",
+    "axios": "^0.27.2",
+    "cfenv": "^1.2.4",
+    "client-oauth2": "^4.3.3",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.4"
+  },
+  "scripts": {
+    "start": "cds run"
+  }
+}
