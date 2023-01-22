@@ -3,7 +3,7 @@ using {views} from '../db/views';
 
 service Shop {
 
-    entity Products    as projection on tables.Products {
+    entity Products    as projection on tables.PRODUCTS {
         *
     };
 

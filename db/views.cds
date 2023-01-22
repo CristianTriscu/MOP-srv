@@ -4,7 +4,7 @@ namespace views;
 
 
 define view ProductsForOrder() as
-    select prod.Name from tables.Products as prod
+    select prod.NAME from tables.PRODUCTS as prod
     inner join tables.OrderRow as ordrow
         on prod.ID = ordrow.Product_ID
     inner join tables.Orders as ord
