@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "TABLES_PRODUCTS",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "tables-PRODUCTS.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "NAME",
+          "GENERIC_NAME",
+          "COMPANY_NAME",
+          "SHORT_DESCRIPTION",
+          "PRICE",
+          "LONG_DESCRIPTION",
+          "IN_STOCK"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "NAME": "NAME",
+        "GENERIC_NAME": "GENERIC_NAME",
+        "COMPANY_NAME": "COMPANY_NAME",
+        "SHORT_DESCRIPTION": "SHORT_DESCRIPTION",
+        "PRICE": "PRICE",
+        "LONG_DESCRIPTION": "LONG_DESCRIPTION",
+        "IN_STOCK": "IN_STOCK"
+      }
+    }
+  ]
+}
