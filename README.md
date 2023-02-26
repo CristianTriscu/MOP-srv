@@ -1,25 +1,9 @@
 # Getting Started
 
-Welcome to your new project.
+Welcome to your MoP project
+ Too run the project locally:
 
-It contains these folders and files, following our recommended project layout:
+1. cf login
+2. cds deploy --to hana:mop
+3. cds watch --profile hybrid
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
-
-
-## Next Steps
-
-- Open a new terminal and run `cds watch` 
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
