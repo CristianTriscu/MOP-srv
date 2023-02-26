@@ -2,7 +2,6 @@ using {managed} from '@sap/cds/common';
 
 namespace tables;
 
-
 entity Users : managed {
     key ID       : Integer;
         Name     : String(50);
@@ -24,35 +23,36 @@ entity PRODUCTS : managed {
 }
 
 entity Orders : managed {
-    key ID       : Integer;
-        UserID   : Integer;
-        Datetime : DateTime;
+    key ID        : Integer;
+        USER_ID   : Integer;
+        DATE_TIME : DateTime;
 }
 
 entity OrderRow : managed {
-    Order_ID   : Integer;
-    Product_ID : Integer;
+    ORDER_ID   : Integer;
+    PRODUCT_ID : Integer;
+    QUANTITY   : Integer
 }
 
 
-entity Books {
-    key id      : Integer;
-        name    : String(100);
-        authors : Association to many BooksAuthors
-                      on authors.book = $self;
+// entity Books {
+//     key id      : Integer;
+//         name    : String(100);
+//         authors : Association to many BooksAuthors
+//                       on authors.book = $self;
 
-}
-
-
-entity BooksAuthors {
-    key author : Association to Authors;
-    key book   : Association to Books
-}
+// }
 
 
-entity Authors {
-    key id    : Integer;
-        name  : String(100);
-        books : Association to many BooksAuthors
-                    on books.author = $self;
-}
+// entity BooksAuthors {
+//     key author : Association to Authors;
+//     key book   : Association to Books
+// }
+
+
+// entity Authors {
+//     key id    : Integer;
+//         name  : String(100);
+//         books : Association to many BooksAuthors
+//                     on books.author = $self;
+// }

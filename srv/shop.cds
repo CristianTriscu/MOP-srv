@@ -10,5 +10,6 @@ service Shop {
     entity Orders      as projection on tables.Orders;
     entity Users       as projection on tables.Users;
     entity ViewExample as projection on views.ProductsForOrder;
+    action submitOrder(orderDetails : LargeString) returns LargeString;
 
 }

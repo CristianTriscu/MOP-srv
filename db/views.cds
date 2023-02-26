@@ -6,8 +6,8 @@ namespace views;
 define view ProductsForOrder() as
     select prod.NAME from tables.PRODUCTS as prod
     inner join tables.OrderRow as ordrow
-        on prod.ID = ordrow.Product_ID
+        on prod.ID = ordrow.PRODUCT_ID
     inner join tables.Orders as ord
-        on ord.ID = ordrow.Order_ID
+        on ord.ID = ordrow.ORDER_ID
     where
-        Order_ID = 1;
+        ORDER_ID = 1;
