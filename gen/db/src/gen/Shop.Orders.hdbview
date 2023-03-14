@@ -5,6 +5,6 @@ VIEW Shop_Orders AS SELECT
   Orders_0.modifiedAt,
   Orders_0.modifiedBy,
   Orders_0.ID,
-  Orders_0.UserID,
-  Orders_0."DATETIME"
+  Orders_0.USER_ID,
+  Orders_0.DATE_TIME
 FROM tables_Orders AS Orders_0

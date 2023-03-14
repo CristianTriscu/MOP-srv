@@ -4,6 +4,7 @@ COLUMN TABLE tables_OrderRow (
   createdBy NVARCHAR(255),
   modifiedAt TIMESTAMP,
   modifiedBy NVARCHAR(255),
-  Order_ID INTEGER,
-  Product_ID INTEGER
+  ORDER_ID INTEGER,
+  PRODUCT_ID INTEGER,
+  QUANTITY INTEGER
 )

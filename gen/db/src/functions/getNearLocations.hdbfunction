@@ -1,0 +1,28 @@
+FUNCTION "getNearLocations" (p_latitude DECIMAL(17, 7) , p_longitude DECIMAL(18, 7), p_distance DECIMAL(10,5)) 
+RETURNS TABLE (id INTEGER,
+name NVARCHAR(128),
+longitude DECIMAL(18, 7),
+latitude DECIMAL(17, 7),
+distance double)	
+
+LANGUAGE SQLSCRIPT AS
+BEGIN
+
+    result = SELECT id,name, longitude, latitude,
+    6371 * acos(cos(:p_latitude*(3.14/180))
+       * cos((3.14/180)*(latitude))
+       * cos((3.14/180)*(longitude) - (3.14/180)*(:p_longitude))
+       + sin((3.14/180)*(:p_latitude))
+       * sin((3.14/180)*(latitude))) AS distance
+FROM tables_locations
+WHERE 6371 * acos(cos((3.14/180)*(:p_latitude))
+       * cos((3.14/180)*(latitude))
+       * cos((3.14/180)*(longitude) - (3.14/180)*(:p_longitude))
+       + sin((3.14/180)*(:p_latitude))
+       * sin((3.14/180)*(latitude))) <= :p_distance
+ORDER BY distance;
+
+
+
+    RETURN :result;
+END;

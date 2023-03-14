@@ -2,10 +2,10 @@
   "format_version": 1,
   "imports": [
     {
-      "target_table": "TABLES_ORDERROW",
+      "target_table": "TABLES_LOCATIONS",
       "source_data": {
         "data_type": "CSV",
-        "file_name": "tables-OrderRow.csv",
+        "file_name": "tables-LOCATIONS.csv",
         "has_header": true,
         "type_config": {
           "delimiter": ","
@@ -13,14 +13,18 @@
       },
       "import_settings": {
         "import_columns": [
-          "ORDER_ID",
-          "PRODUCT_ID"
+          "ID",
+          "NAME",
+          "LATITUDE",
+          "LONGITUDE"
         ],
         "include_filter": []
       },
       "column_mappings": {
-        "ORDER_ID": "Order_ID",
-        "PRODUCT_ID": "Product_ID"
+        "ID": "ID",
+        "NAME": "NAME",
+        "LATITUDE": "LATITUDE",
+        "LONGITUDE": "LONGITUDE"
       }
     }
   ]
