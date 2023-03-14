@@ -34,6 +34,17 @@ entity OrderRow : managed {
     QUANTITY   : Integer
 }
 
+entity LOCATIONS {
+    key ID        : Integer;
+        LONGITUDE : Decimal(18, 7);
+        LATITUDE  : Decimal(17, 7);
+        NAME      : String(128);
+        STREET    : String(128);
+        CITY      : String(64);
+
+
+}
+
 
 // entity Books {
 //     key id      : Integer;
